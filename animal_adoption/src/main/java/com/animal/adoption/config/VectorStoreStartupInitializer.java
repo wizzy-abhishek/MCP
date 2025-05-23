@@ -40,8 +40,8 @@ class VectorStoreStartupInitializer implements ApplicationListener<ContextRefres
             System.out.println("Found " + dogs.size() + " dogs from DogRepo.");
 
             for (Dog dog : dogs) {
-                String content = "id: %s, name: %s, description: %s"
-                        .formatted(dog.id(), dog.name(), dog.description());
+                String content = "id: %s, name: %s, description: %s , owner: %s"
+                        .formatted(dog.id(), dog.name(), dog.description(), dog.owner());
                 Document doc = new Document(content);
 
                 CompletableFuture.runAsync(() -> {

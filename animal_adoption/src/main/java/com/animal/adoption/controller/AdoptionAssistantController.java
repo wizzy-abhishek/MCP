@@ -78,18 +78,19 @@ public class AdoptionAssistantController {
                 .prompt()
                 .user(question)
                 .call()
-                .content() ;
+                .content();
 
-		/*
-		return router.prompt()
-				.advisors(memAdvisor)
-				.user(question)
-				.system(system)
-				.call()
-				.content();*/
+        if (resolvedChatClient == null) {
+            return "I'm sorry, I couldn't understand your request. Please try again.";
+        }
 
-        return delegates
-                .get(resolvedChatClient)
+        ChatClient client = delegates.get(resolvedChatClient);
+
+        if (client == null) {
+            return "Sorry, no service available for category: " + resolvedChatClient;
+        }
+
+        return client
                 .prompt()
                 .advisors(memAdvisor)
                 .user(question)
@@ -97,5 +98,6 @@ public class AdoptionAssistantController {
                 .call()
                 .content();
     }
+
 }
 
