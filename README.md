@@ -1,4 +1,5 @@
 
+#AGENTIC AI 
 
 An Agentic AI application built on the Spring Boot framework that automates animal adoption and care processes. 
 This prototype validates the core architecture for a conversational assistant that can understand user intent, retrieve contextual information, and perform real-world actions
@@ -55,8 +56,8 @@ This guide will help you get a local copy of the project up and running for deve
         # Your LLM API key
         spring.ai.openai.api-key=your_openai_api_key
     
-    # RAG Vector Store configuration
-    spring.ai.vectorstore.pgvector.embedding-dimension=1536
+        # RAG Vector Store configuration
+        spring.ai.vectorstore.pgvector.embedding-dimension=1536
 
     Run the Database:
         You can use Docker to run a PostgreSQL instance with the PGVector extension.
