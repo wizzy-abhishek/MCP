@@ -14,3 +14,17 @@ This prototype validates the core architecture for a conversational assistant th
     Conversational Memory: Maintains per-user chat history to support coherent, multi-turn interactions.
 
     Modular & Scalable: Designed with a clean, loosely coupled architecture to easily integrate new features and tools.
+
+
+🚀 Technologies Used
+
+    Backend Framework: Spring Boot 3.x
+
+    AI Framework: Spring AI
+
+    Database: PostgreSQL with the PGVector extension
+
+    LLM Provider: OpenAI
+
+    Build Tool: Maven
+
