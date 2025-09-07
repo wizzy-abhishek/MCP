@@ -1,6 +1,16 @@
-This is an Agentic AI system. Here, I tried to implement a router forwards the query to LLM.
-Once LLM receives the query, it configures the context of users' query, it states to the router that which tool to use.
-So the MCP Host, assosiates the MCP client with the provided data from the LLM.
-The MCP client is the one that communicate with the MCP server(specific tool).
-They return the response according to their logic.
-After this response is sent back to the LLM, again humanize the and the main user gets what they want.
+
+
+An Agentic AI application built on the Spring Boot framework that automates animal adoption and care processes. 
+This prototype validates the core architecture for a conversational assistant that can understand user intent, retrieve contextual information, and perform real-world actions
+
+🌟 Features
+
+    Intelligent Routing: A router-agent architecture that dynamically delegates user queries to specialized AI agents based on intent.
+
+    Retrieval Augmented Generation (RAG): Integrates with a PostgreSQL Vector database to provide accurate, data-driven responses using contextual information.
+
+    Automated Tool Calling: Enables the AI to perform business logic (e.g., booking appointments) by calling a custom tool.
+
+    Conversational Memory: Maintains per-user chat history to support coherent, multi-turn interactions.
+
+    Modular & Scalable: Designed with a clean, loosely coupled architecture to easily integrate new features and tools.
