@@ -69,3 +69,15 @@ This guide will help you get a local copy of the project up and running for deve
        ./mvnw spring-boot:run
    
 The application will start on port 8080.
+
+💡 Usage
+
+Once the application is running, you can test the AI assistant by making a GET request to the following endpoint:
+
+    GET http://localhost:8080/inquire?user=john_doe&question=What is a golden retriever?
+
+Example Queries:
+
+    GET http://localhost:8080/inquire?user=john_doe&question=Tell me about a dog that is good with kids.
+
+    GET http://localhost:8080/inquire?user=john_doe&question=Book an appointment for my dog Max on August 20, 2025.
